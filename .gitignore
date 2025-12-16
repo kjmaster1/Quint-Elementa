@@ -45,3 +45,9 @@ local.properties
 
 .DS_Store
 /libs/
+
+# Secrets (API Keys for CurseForge/Modrinth)
+secrets.json
+
+# Data Generation Cache
+src/generated/resources/.cache
