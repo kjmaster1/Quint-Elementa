@@ -9,7 +9,6 @@ public class AllBlocks {
 		REGISTRATE.setCreativeTab(AllCreativeModeTabs.BASE_CREATIVE_TAB);
 	}
 
-
 	public static void register() {
 	}
 

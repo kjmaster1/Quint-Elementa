@@ -229,7 +229,7 @@ public class AllCreativeModeTabs {
 
 			public enum Type {
 				BEFORE,
-				AFTER;
+				AFTER
 			}
 		}
 	}

@@ -1,9 +1,9 @@
 package com.kjmaster.quintelementa;
 
+import org.jetbrains.annotations.NotNull;
+
 import net.createmod.catnip.render.BindableTexture;
 import net.minecraft.resources.ResourceLocation;
-
-import org.jetbrains.annotations.NotNull;
 
 public enum AllSpecialTextures implements BindableTexture {
 

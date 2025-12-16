@@ -1,7 +1,6 @@
 package com.kjmaster.quintelementa;
 
 import com.kjmaster.quintelementa.foundation.data.QuintElementaRegistrate;
-
 import com.tterrag.registrate.util.entry.ItemEntry;
 
 import net.minecraft.tags.TagKey;

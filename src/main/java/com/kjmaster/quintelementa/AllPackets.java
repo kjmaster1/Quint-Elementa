@@ -1,12 +1,12 @@
 package com.kjmaster.quintelementa;
 
+import java.util.Locale;
+
 import net.createmod.catnip.net.base.BasePacketPayload;
 import net.createmod.catnip.net.base.CatnipPacketRegistry;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-
-import java.util.Locale;
 
 public enum AllPackets implements BasePacketPayload.PacketTypeProvider {
 

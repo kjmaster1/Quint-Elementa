@@ -1,9 +1,10 @@
 package com.kjmaster.quintelementa;
 
+import org.jetbrains.annotations.Nullable;
+
 import net.createmod.catnip.lang.Lang;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -11,14 +12,9 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
-
 import net.minecraft.world.level.block.state.BlockState;
-
 import net.minecraft.world.level.material.Fluid;
-
 import net.minecraft.world.level.material.FluidState;
-
-import org.jetbrains.annotations.Nullable;
 
 public class AllTags {
 

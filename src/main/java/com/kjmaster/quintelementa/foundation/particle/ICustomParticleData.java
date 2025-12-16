@@ -1,5 +1,7 @@
 package com.kjmaster.quintelementa.foundation.particle;
 
+import org.jetbrains.annotations.NotNull;
+
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.client.particle.ParticleProvider;
@@ -10,10 +12,7 @@ import net.minecraft.network.codec.StreamCodec;
 
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
-
-import org.jetbrains.annotations.NotNull;
 
 public interface ICustomParticleData<T extends ParticleOptions> {
 
@@ -37,10 +36,10 @@ public interface ICustomParticleData<T extends ParticleOptions> {
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	public ParticleProvider<T> getFactory();
+	ParticleProvider<T> getFactory();
 
 	@OnlyIn(Dist.CLIENT)
-	public default void register(ParticleType<T> type, RegisterParticleProvidersEvent event) {
+	default void register(ParticleType<T> type, RegisterParticleProvidersEvent event) {
 		event.registerSpecial(type, getFactory());
 	}
 

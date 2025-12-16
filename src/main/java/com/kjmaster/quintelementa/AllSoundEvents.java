@@ -1,5 +1,16 @@
 package com.kjmaster.quintelementa;
 
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.BiConsumer;
+import java.util.function.Supplier;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
@@ -16,29 +27,15 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
-
 import net.minecraft.world.level.Level;
-
 import net.minecraft.world.phys.Vec3;
 
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.RegisterEvent;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.CompletableFuture;
-import java.util.function.BiConsumer;
-import java.util.function.Supplier;
-
 public class AllSoundEvents {
 
 	public static final Map<ResourceLocation, SoundEntry> ALL = new HashMap<>();
-
 
 
 	private static SoundEntryBuilder create(String name) {
@@ -110,7 +107,8 @@ public class AllSoundEvents {
 
 	}
 
-	public record ConfiguredSoundEvent(Supplier<SoundEvent> event, float volume, float pitch) {}
+	public record ConfiguredSoundEvent(Supplier<SoundEvent> event, float volume, float pitch) {
+	}
 
 	public static class SoundEntryBuilder {
 
@@ -268,8 +266,8 @@ public class AllSoundEvents {
 
 	private static class WrappedSoundEntry extends SoundEntry {
 
-		private List<ConfiguredSoundEvent> wrappedEvents;
-		private List<CompiledSoundEvent> compiledEvents;
+		private final List<ConfiguredSoundEvent> wrappedEvents;
+		private final List<CompiledSoundEvent> compiledEvents;
 
 		public WrappedSoundEntry(ResourceLocation id, String subtitle,
 								 List<ConfiguredSoundEvent> wrappedEvents, SoundSource category, int attenuationDistance) {

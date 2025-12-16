@@ -1,13 +1,15 @@
 package com.kjmaster.quintelementa;
 
-import net.minecraft.resources.ResourceLocation;
-
 import org.slf4j.Logger;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.kjmaster.quintelementa.foundation.data.QuintElementaRegistrate;
 import com.mojang.logging.LogUtils;
+
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -28,7 +30,8 @@ public class QuintElementa {
 		.disableHtmlEscaping()
 		.create();
 
-	private static final QuintElementaRegistrate REGISTRATE = QuintElementaRegistrate.create(ID);
+	private static final QuintElementaRegistrate REGISTRATE = QuintElementaRegistrate.create(ID)
+		.defaultCreativeTab((ResourceKey<CreativeModeTab>) null);
 
 	public QuintElementa(IEventBus modEventBus, ModContainer modContainer) {
 
