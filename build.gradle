@@ -246,19 +246,19 @@ publishMods {
 
     curseforge {
         accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
-        projectId = "328085"
+        projectId = ""
         minecraftVersions.add(minecraft_version)
     }
 
     modrinth {
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
-        projectId = "LNytGWDc"
+        projectId = ""
         minecraftVersions.add(minecraft_version)
     }
 
     github {
         accessToken = providers.environmentVariable("GITHUB_TOKEN")
-        repository = "Creators-of-Create/Create"
+        repository = "kjmaster1/Quint-Elementa"
         commitish = gitHash
         tagName = "mc$minecraft_version-$mod_version"
         file.unset()
