@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "quint_elementa:item/essence_bucket",
+    "layer1": "quint_elementa:item/essence_bucket_liquid"
+  }
+}

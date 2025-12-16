@@ -1,0 +1,17 @@
+{
+  "block.quint_elementa.air_essence": "Air Essence",
+  "block.quint_elementa.arcane_essence": "Arcane Essence",
+  "block.quint_elementa.earth_essence": "Earth Essence",
+  "block.quint_elementa.fire_essence": "Fire Essence",
+  "block.quint_elementa.water_essence": "Water Essence",
+  "fluid.quint_elementa.air_essence": "Air Essence",
+  "fluid.quint_elementa.arcane_essence": "Arcane Essence",
+  "fluid.quint_elementa.earth_essence": "Earth Essence",
+  "fluid.quint_elementa.fire_essence": "Fire Essence",
+  "fluid.quint_elementa.water_essence": "Water Essence",
+  "item.quint_elementa.air_essence_bucket": "Air Essence Bucket",
+  "item.quint_elementa.arcane_essence_bucket": "Arcane Essence Bucket",
+  "item.quint_elementa.earth_essence_bucket": "Earth Essence Bucket",
+  "item.quint_elementa.fire_essence_bucket": "Fire Essence Bucket",
+  "item.quint_elementa.water_essence_bucket": "Water Essence Bucket"
+}
