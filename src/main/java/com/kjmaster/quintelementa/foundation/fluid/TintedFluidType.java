@@ -1,4 +1,4 @@
-package com.kjmaster.quintelementa.content.essence.fluid;
+package com.kjmaster.quintelementa.foundation.fluid;
 
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;

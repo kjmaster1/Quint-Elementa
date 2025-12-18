@@ -14,7 +14,6 @@ public class AllItems {
 		REGISTRATE.setCreativeTab(AllCreativeModeTabs.BASE_CREATIVE_TAB);
 	}
 
-
 	// Shortcuts
 
 	private static ItemEntry<Item> ingredient(String name) {

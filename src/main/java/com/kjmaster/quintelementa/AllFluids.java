@@ -1,8 +1,8 @@
 package com.kjmaster.quintelementa;
 
-import com.kjmaster.quintelementa.content.essence.QEColor;
-import com.kjmaster.quintelementa.content.essence.fluid.TintedFluidType;
+import com.kjmaster.quintelementa.api.Element;
 import com.kjmaster.quintelementa.foundation.data.QuintElementaRegistrate;
+import com.kjmaster.quintelementa.foundation.fluid.TintedFluidType;
 import com.tterrag.registrate.util.entry.FluidEntry;
 
 import net.minecraft.resources.ResourceLocation;
@@ -29,7 +29,7 @@ public class AllFluids {
 	// Air: Light, gaseous
 	public static final FluidEntry<Flowing> AIR_ESSENCE = REGISTRATE
 		.fluid("air_essence", WATER_STILL, WATER_FLOW,
-			(p, s, f) -> new TintedFluidType(p, s, f, QEColor.AIR_INT))
+			(p, s, f) -> new TintedFluidType(p, s, f, Element.AIR.colorHex))
 		.lang("Air Essence")
 		.properties(p -> p
 			.density(500)
@@ -39,14 +39,14 @@ public class AllFluids {
 		.source(BaseFlowingFluid.Source::new)
 		.bucket()
 		.model((ctx, prov) -> prov.generated(ctx::getEntry, BUCKET_BASE, BUCKET_FLUID))
-		.color(() -> () -> (stack, tintIndex) -> tintIndex == 1 ? QEColor.AIR_INT : -1)
+		.color(() -> () -> (stack, tintIndex) -> tintIndex == 1 ? Element.AIR.colorHex : -1)
 		.build()
 		.register();
 
 	// Arcane: Glowing, viscous
 	public static final FluidEntry<BaseFlowingFluid.Flowing> ARCANE_ESSENCE = REGISTRATE
 		.fluid("arcane_essence", WATER_STILL, WATER_FLOW,
-			(p, s, f) -> new TintedFluidType(p, s, f, QEColor.ARCANE_INT))
+			(p, s, f) -> new TintedFluidType(p, s, f, Element.ARCANE.colorHex))
 		.lang("Arcane Essence")
 		.properties(p -> p
 			.lightLevel(10)
@@ -56,14 +56,14 @@ public class AllFluids {
 		.source(BaseFlowingFluid.Source::new)
 		.bucket()
 		.model((ctx, prov) -> prov.generated(ctx::getEntry, BUCKET_BASE, BUCKET_FLUID))
-		.color(() -> () -> (stack, tintIndex) -> tintIndex == 1 ? QEColor.ARCANE_INT : -1)
+		.color(() -> () -> (stack, tintIndex) -> tintIndex == 1 ? Element.ARCANE.colorHex : -1)
 		.build()
 		.register();
 
 	// Earth: Heavy, sludge-like
 	public static final FluidEntry<BaseFlowingFluid.Flowing> EARTH_ESSENCE = REGISTRATE
 		.fluid("earth_essence", WATER_STILL, WATER_FLOW,
-			(p, s, f) -> new TintedFluidType(p, s, f, QEColor.EARTH_INT))
+			(p, s, f) -> new TintedFluidType(p, s, f, Element.EARTH.colorHex))
 		.lang("Earth Essence")
 		.properties(p -> p
 			.viscosity(6000)
@@ -72,14 +72,14 @@ public class AllFluids {
 		.source(BaseFlowingFluid.Source::new)
 		.bucket()
 		.model((ctx, prov) -> prov.generated(ctx::getEntry, BUCKET_BASE, BUCKET_FLUID))
-		.color(() -> () -> (stack, tintIndex) -> tintIndex == 1 ? QEColor.EARTH_INT : -1)
+		.color(() -> () -> (stack, tintIndex) -> tintIndex == 1 ? Element.EARTH.colorHex : -1)
 		.build()
 		.register();
 
 	// Fire: Hot, bright
 	public static final FluidEntry<BaseFlowingFluid.Flowing> FIRE_ESSENCE = REGISTRATE
 		.fluid("fire_essence", WATER_STILL, WATER_FLOW,
-			(p, s, f) -> new TintedFluidType(p, s, f, QEColor.FIRE_INT))
+			(p, s, f) -> new TintedFluidType(p, s, f, Element.FIRE.colorHex))
 		.lang("Fire Essence")
 		.properties(p -> p
 			.lightLevel(15)
@@ -89,14 +89,14 @@ public class AllFluids {
 		.source(BaseFlowingFluid.Source::new)
 		.bucket()
 		.model((ctx, prov) -> prov.generated(ctx::getEntry, BUCKET_BASE, BUCKET_FLUID))
-		.color(() -> () -> (stack, tintIndex) -> tintIndex == 1 ? QEColor.FIRE_INT : -1)
+		.color(() -> () -> (stack, tintIndex) -> tintIndex == 1 ? Element.FIRE.colorHex : -1)
 		.build()
 		.register();
 
 	// Water: Standard
 	public static final FluidEntry<BaseFlowingFluid.Flowing> WATER_ESSENCE = REGISTRATE
 		.fluid("water_essence", WATER_STILL, WATER_FLOW,
-			(p, s, f) -> new TintedFluidType(p, s, f, QEColor.WATER_INT))
+			(p, s, f) -> new TintedFluidType(p, s, f, Element.WATER.colorHex))
 		.lang("Water Essence")
 		.properties(p -> p
 			.canHydrate(true)
@@ -106,10 +106,9 @@ public class AllFluids {
 		.source(BaseFlowingFluid.Source::new)
 		.bucket()
 		.model((ctx, prov) -> prov.generated(ctx::getEntry, BUCKET_BASE, BUCKET_FLUID))
-		.color(() -> () -> (stack, tintIndex) -> tintIndex == 1 ? QEColor.WATER_INT : -1)
+		.color(() -> () -> (stack, tintIndex) -> tintIndex == 1 ? Element.WATER.colorHex : -1)
 		.build()
 		.register();
-
 
 	public static void register() {
 	}

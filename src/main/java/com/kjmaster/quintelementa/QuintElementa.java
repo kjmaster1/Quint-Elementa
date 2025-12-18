@@ -14,7 +14,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 
 @Mod(QuintElementa.ID)
 public class QuintElementa {
@@ -48,9 +47,6 @@ public class QuintElementa {
 		AllParticleTypes.register(modEventBus);
 		AllPackets.register();
 		AllAttachmentTypes.register(modEventBus);
-
-
-		modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
 		modEventBus.addListener(AllSoundEvents::register);
 	}

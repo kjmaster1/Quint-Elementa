@@ -47,7 +47,7 @@ public class AllCreativeModeTabs {
 
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BASE_CREATIVE_TAB = REGISTER.register("base",
 		() -> CreativeModeTab.builder()
-			.title(Component.translatable("itemGroup.create.base"))
+			.title(Component.translatable("itemGroup.quint_elementa.base"))
 			.withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
 			.icon(() -> new ItemStack(Items.ENCHANTING_TABLE))
 			.displayItems(new RegistrateDisplayItemsGenerator(true, AllCreativeModeTabs.BASE_CREATIVE_TAB))

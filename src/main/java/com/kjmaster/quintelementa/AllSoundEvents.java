@@ -37,6 +37,18 @@ public class AllSoundEvents {
 
 	public static final Map<ResourceLocation, SoundEntry> ALL = new HashMap<>();
 
+	public static final SoundEntry
+
+	WAND_ROTATE = create("wand_rotate").subtitle("Wand Used")
+		.playExisting(SoundEvents.WOODEN_TRAPDOOR_CLOSE, .25f, 1.25f)
+		.category(SoundSource.BLOCKS)
+		.build(),
+
+	WAND_REMOVE = create("wand_remove").subtitle("Component breaks")
+		.playExisting(SoundEvents.ITEM_PICKUP, .25f, .75f)
+		.playExisting(SoundEvents.NETHERITE_BLOCK_HIT, .25f, .75f)
+		.category(SoundSource.BLOCKS)
+		.build();
 
 	private static SoundEntryBuilder create(String name) {
 		return create(QuintElementa.asResource(name));
