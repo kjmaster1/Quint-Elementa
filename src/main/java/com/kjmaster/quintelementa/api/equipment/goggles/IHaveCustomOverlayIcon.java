@@ -11,7 +11,8 @@ public sealed interface IHaveCustomOverlayIcon permits IHaveGoggleInformation, I
 	 * @return The {@link ItemStack} you want the overlay to show instead of the goggles
 	 */
 	default ItemStack getIcon(boolean isPlayerSneaking) {
-		return AllItems.GOGGLES.asStack();
+		return ItemStack.EMPTY;
+		// return AllItems.GOGGLES.asStack();
 	}
 }
 

@@ -63,10 +63,6 @@ public class AllConfigs {
 
 		for (Entry<Type, ConfigBase> pair : CONFIGS.entrySet())
 			container.registerConfig(pair.getKey(), pair.getValue().specification);
-
-		CStress stress = server().kinetics.stressValues;
-		BlockStressValues.IMPACTS.registerProvider(stress::getImpact);
-		BlockStressValues.CAPACITIES.registerProvider(stress::getCapacity);
 	}
 
 	@SubscribeEvent
